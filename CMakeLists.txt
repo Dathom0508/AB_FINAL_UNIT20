@@ -1,51 +1,34 @@
+# Mínima versión requerida de CMake
 cmake_minimum_required(VERSION 3.12)
 
-# Configuración del proyecto
-project("AB_FINAL_UNIDAD20")
+# Nombre del proyecto
+Cmake "project"(AB_FINAL_UNIDAD20)
 
-# Especificación de C++ estándar
+# Especificar el estándar de C++
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF) # Para evitar extensiones específicas del compilador
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Configuración del compilador
-set(CMAKE_CXX_COMPILER "g++") # clang++/g++/icx/cl
-set(CMAKE_CXX_COMPILER_ID "GNU") # clang++/g++/icx/cl
+# Forzar el uso de g++
+set(CMAKE_CXX_COMPILER "g++")
 
-# Configuración de compilación (Debug/Release)
-set(CMAKE_BUILD_TYPE Debug) # Puedes cambiar a Release si lo deseas
+# Verificar configuración del compilador
+message(STATUS "Compilador configurado: ${CMAKE_CXX_COMPILER}")
+message(STATUS "Versión del compilador: ${CMAKE_CXX_COMPILER_VERSION}")
 
-# Configuración específica del compilador
-if (CMAKE_CXX_COMPILER STREQUAL "g++")
-    add_compile_options(
-        "$<$<CONFIG:Debug>:-pedantic;-Wall;-Wextra;-Wconversion;-Wshadow;-Wcast-qual;-Wwrite-strings;-O0;-ggdb3;-DDEBUG>"
-        "$<$<CONFIG:Release>:-pedantic;-Wall;-O3>"
-    )
-else()
-    message(WARNING "Compilador no soportado. No se aplican banderas específicas.")
-endif()
+# Archivos fuente
+set(SOURCE_FILES
+    src/main.cpp
+    src/Database.cpp
+    src/Paciente.cpp
+)
 
-# Verificar compilador activo
-message(STATUS "CMAKE_CXX_COMPILER: ${CMAKE_CXX_COMPILER}")
-message(STATUS "CMAKE_CXX_COMPILER_ID: ${CMAKE_CXX_COMPILER_ID}")
-message(STATUS "CMAKE_CXX_COMPILER_VERSION: ${CMAKE_CXX_COMPILER_VERSION}")
+# Incluir encabezados desde el directorio `include`
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
-# Configuración del ejecutable como aplicación de consola
-add_executable(AB_FINAL_UNIDAD2 src/main.cpp)
+# Configurar el ejecutable
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
-# Directorios de encabezados
-target_include_directories(AB_FINAL_UNIDAD2 PRIVATE ${PROJECT_SOURCE_DIR}/include)
-
-# Directorio de salida
+# Directorio de salida para el ejecutable
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-# Instalación
-install(TARGETS AB_FINAL_UNIDAD2 RUNTIME DESTINATION bin)
-
-# Pruebas automáticas para verificar la configuración
-enable_testing()
-
-add_test(
-    NAME CompiladorCorrecto
-    COMMAND ${CMAKE_COMMAND} -E echo "Compilador: ${CMAKE_CXX_COMPILER_ID}, Versión: ${CMAKE_CXX_COMPILER_VERSION}"
-)

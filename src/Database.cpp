@@ -1,4 +1,4 @@
-#include "Database.hpp"
+#include "../include/Database.hpp"
 #include <iostream>
 
 Database::Database(const std::string& dbName) : db(nullptr), dbName(dbName) {}

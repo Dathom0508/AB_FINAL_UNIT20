@@ -1,4 +1,4 @@
-#include "Paciente.hpp"
+#include "../include/Paciente.hpp"
 #include <iostream>
 
 Paciente::Paciente(int dni, const std::string &nombre, const std::string &apellidos,
