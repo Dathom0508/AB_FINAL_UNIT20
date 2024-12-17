@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 # Configuración del proyecto
-project('AB_FINAL_UNIDAD20')
+project("AB_FINAL_UNIDAD20")
 
 # Especificación de C++ estándar
 set(CMAKE_CXX_STANDARD 20)
@@ -10,6 +10,7 @@ set(CMAKE_CXX_EXTENSIONS OFF) # Para evitar extensiones específicas del compila
 
 # Configuración del compilador
 set(CMAKE_CXX_COMPILER "g++") # clang++/g++/icx/cl
+set(CMAKE_CXX_COMPILER_ID "GNU") # clang++/g++/icx/cl
 
 # Configuración de compilación (Debug/Release)
 set(CMAKE_BUILD_TYPE Debug) # Puedes cambiar a Release si lo deseas
