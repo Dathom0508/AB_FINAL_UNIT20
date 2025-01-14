@@ -28,4 +28,4 @@ public:
     static void mostrarTodos(Database& db);
 };
 
-#endif // MEDICO_HPP
+#endif 

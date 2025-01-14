@@ -4,22 +4,22 @@
 #include <iostream>
 
 void menuPrincipal() {
-    std::cout << "\nSistema Hospitalario\n";
-    std::cout << "1. Añadir Paciente\n";
+    std::cout << "\n Sistema Hospitalario \n";
+    std::cout << "1. Anadir Paciente\n";
     std::cout << "2. Mostrar Pacientes\n";
     std::cout << "3. Salir\n";
-    std::cout << "Elige una opción: ";
+    std::cout << "Elige una opcion: ";
 }
 
 void menuPaciente(Database &db) {
     int opcion = 0;
 
     while (opcion != 3) {
-        std::cout << "\nMenú Pacientes\n";
+        std::cout << "\nMenu Pacientes\n";
         std::cout << "1. Añadir Paciente\n";
         std::cout << "2. Mostrar Pacientes\n";
-        std::cout << "3. Volver al menú principal\n";
-        std::cout << "Elige una opción: ";
+        std::cout << "3. Volver al menu principal\n";
+        std::cout << "Elige una opcion: ";
         std::cin >> opcion;
 
         if (opcion == 1) {
@@ -54,9 +54,9 @@ void menuPaciente(Database &db) {
         } else if (opcion == 2) {
             Paciente::mostrarTodos(db);
         } else if (opcion == 3) {
-            std::cout << "Volviendo al menú principal...\n";
+            std::cout << "Volviendo al menu principal...\n";
         } else {
-            std::cout << "Opción inválida. Intente de nuevo.\n";
+            std::cout << "Opcion invalida. Intente de nuevo.\n";
         }
     }
 }
