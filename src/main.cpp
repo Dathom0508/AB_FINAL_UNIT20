@@ -1,17 +1,19 @@
 #include "../include/Paciente.hpp"
 #include "../include/Medico.hpp"
-#include "../include/Database.hpp"
+#include "../include/CSVcontrol.hpp"
 #include <iostream>
 
 void menuPrincipal() {
     std::cout << "\n Sistema Hospitalario \n";
-    std::cout << "1. Anadir Paciente\n";
+    std::cout << "1. Añadir Paciente\n";
     std::cout << "2. Mostrar Pacientes\n";
-    std::cout << "3. Salir\n";
+    std::cout << "3. Añadir Medico\n";
+    std::cout << "4. Mostrar Medicos\n";
+    std::cout << "5. Salir\n";
     std::cout << "Elige una opcion: ";
 }
 
-void menuPaciente(Database &db) {
+void menuPaciente(ControlCSV &controlCSV) {
     int opcion = 0;
 
     while (opcion != 3) {
@@ -50,9 +52,9 @@ void menuPaciente(Database &db) {
             std::cin >> edad;
 
             Paciente p(dni, nombre, apellidos, fechaNacimiento, genero, direccion, telefono, estadoSalud, medicoCabeceraId, edad);
-            p.guardarEnDB(db);
+            p.guardarEnCSV(controlCSV);
         } else if (opcion == 2) {
-            Paciente::mostrarTodos(db);
+            Paciente::mostrarTodos(controlCSV); 
         } else if (opcion == 3) {
             std::cout << "Volviendo al menu principal...\n";
         } else {
@@ -62,12 +64,7 @@ void menuPaciente(Database &db) {
 }
 
 int main() {
-    Database db("Hospital.db");
-
-    if (!db.open()) {
-        std::cerr << "Error al abrir la base de datos." << std::endl;
-        return 1;
-    }
+    ControlCSV controlCSV;
 
     int opcion = 0;
     while (opcion != 3) {
@@ -75,9 +72,9 @@ int main() {
         std::cin >> opcion;
 
         if (opcion == 1) {
-            menuPaciente(db);
+            menuPaciente(controlCSV);
         } else if (opcion == 2) {
-            Paciente::mostrarTodos(db);
+            Paciente::mostrarTodos(controlCSV);
         } else if (opcion == 3) {
             std::cout << "Saliendo del programa...\n";
         } else {
@@ -85,6 +82,5 @@ int main() {
         }
     }
 
-    db.close();
     return 0;
 }

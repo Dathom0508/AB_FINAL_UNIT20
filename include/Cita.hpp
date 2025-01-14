@@ -1,8 +1,7 @@
 #ifndef CITA_HPP
 #define CITA_HPP
-
 #include <string>
-#include "Database.hpp" 
+#include "../include/CSVcontrol.hpp"
 
 class Cita {
 private:
@@ -21,9 +20,7 @@ public:
     
     ~Cita();
 
-    bool guardarEnDB(Database& db);
-    bool actualizarEnDB(Database& db);
-    bool eliminarDeDB(Database& db);
+    bool guardarEnCSV(ControlCSV& controlCSV); 
 };
 
 #endif

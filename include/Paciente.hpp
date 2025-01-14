@@ -1,7 +1,6 @@
 #ifndef PACIENTE_HPP
 #define PACIENTE_HPP
-
-#include "Database.hpp"
+#include "../include/CSVcontrol.hpp"
 #include <string>
 
 class Paciente {
@@ -22,8 +21,8 @@ public:
              const std::string& direccion, const std::string& telefono,
              const std::string& estadoSalud, int medicoCabeceraId, int edad);
 
-    void guardarEnDB(Database& db);
-    static void mostrarTodos(Database& db);
+    void guardarEnCSV(ControlCSV& controlCSV);
+    static void mostrarTodos(ControlCSV& controlCSV);
 };
 
 #endif 

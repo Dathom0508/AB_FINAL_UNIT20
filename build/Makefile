@@ -128,6 +128,30 @@ AB_FINAL_UNIDAD20/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/build
 .PHONY : AB_FINAL_UNIDAD20/fast
 
+src/CSVcontrol.obj: src/CSVcontrol.cpp.obj
+.PHONY : src/CSVcontrol.obj
+
+# target to build an object file
+src/CSVcontrol.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.obj
+.PHONY : src/CSVcontrol.cpp.obj
+
+src/CSVcontrol.i: src/CSVcontrol.cpp.i
+.PHONY : src/CSVcontrol.i
+
+# target to preprocess a source file
+src/CSVcontrol.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.i
+.PHONY : src/CSVcontrol.cpp.i
+
+src/CSVcontrol.s: src/CSVcontrol.cpp.s
+.PHONY : src/CSVcontrol.s
+
+# target to generate assembly for a file
+src/CSVcontrol.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.s
+.PHONY : src/CSVcontrol.cpp.s
+
 src/Cita.obj: src/Cita.cpp.obj
 .PHONY : src/Cita.obj
 
@@ -151,30 +175,6 @@ src/Cita.s: src/Cita.cpp.s
 src/Cita.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.s
 .PHONY : src/Cita.cpp.s
-
-src/Database.obj: src/Database.cpp.obj
-.PHONY : src/Database.obj
-
-# target to build an object file
-src/Database.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.obj
-.PHONY : src/Database.cpp.obj
-
-src/Database.i: src/Database.cpp.i
-.PHONY : src/Database.i
-
-# target to preprocess a source file
-src/Database.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.i
-.PHONY : src/Database.cpp.i
-
-src/Database.s: src/Database.cpp.s
-.PHONY : src/Database.s
-
-# target to generate assembly for a file
-src/Database.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.s
-.PHONY : src/Database.cpp.s
 
 src/Medico.obj: src/Medico.cpp.obj
 .PHONY : src/Medico.obj
@@ -257,12 +257,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... AB_FINAL_UNIDAD20
+	@echo ... src/CSVcontrol.obj
+	@echo ... src/CSVcontrol.i
+	@echo ... src/CSVcontrol.s
 	@echo ... src/Cita.obj
 	@echo ... src/Cita.i
 	@echo ... src/Cita.s
-	@echo ... src/Database.obj
-	@echo ... src/Database.i
-	@echo ... src/Database.s
 	@echo ... src/Medico.obj
 	@echo ... src/Medico.i
 	@echo ... src/Medico.s

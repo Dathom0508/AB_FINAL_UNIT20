@@ -86,26 +86,11 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\davud\Desktop\AB_Final_Unidad20\src\main.cpp -o CMakeFiles\AB_FINAL_UNIDAD20.dir\src\main.cpp.s
 
-CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/flags.make
-CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/includes_CXX.rsp
-CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.obj: C:/Users/davud/Desktop/AB_Final_Unidad20/src/Database.cpp
-CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\davud\Desktop\AB_Final_Unidad20\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.obj -MF CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Database.cpp.obj.d -o CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Database.cpp.obj -c C:\Users\davud\Desktop\AB_Final_Unidad20\src\Database.cpp
-
-CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\davud\Desktop\AB_Final_Unidad20\src\Database.cpp > CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Database.cpp.i
-
-CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\davud\Desktop\AB_Final_Unidad20\src\Database.cpp -o CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Database.cpp.s
-
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/flags.make
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/includes_CXX.rsp
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj: C:/Users/davud/Desktop/AB_Final_Unidad20/src/Paciente.cpp
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\davud\Desktop\AB_Final_Unidad20\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\davud\Desktop\AB_Final_Unidad20\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj -MF CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Paciente.cpp.obj.d -o CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Paciente.cpp.obj -c C:\Users\davud\Desktop\AB_Final_Unidad20\src\Paciente.cpp
 
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.i: cmake_force
@@ -120,7 +105,7 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD2
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/includes_CXX.rsp
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj: C:/Users/davud/Desktop/AB_Final_Unidad20/src/Medico.cpp
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\davud\Desktop\AB_Final_Unidad20\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\davud\Desktop\AB_Final_Unidad20\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj -MF CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Medico.cpp.obj.d -o CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Medico.cpp.obj -c C:\Users\davud\Desktop\AB_Final_Unidad20\src\Medico.cpp
 
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.i: cmake_force
@@ -135,7 +120,7 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/includes_CXX.rsp
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj: C:/Users/davud/Desktop/AB_Final_Unidad20/src/Cita.cpp
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\davud\Desktop\AB_Final_Unidad20\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\davud\Desktop\AB_Final_Unidad20\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj -MF CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Cita.cpp.obj.d -o CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Cita.cpp.obj -c C:\Users\davud\Desktop\AB_Final_Unidad20\src\Cita.cpp
 
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.i: cmake_force
@@ -146,24 +131,38 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.s"
 	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\davud\Desktop\AB_Final_Unidad20\src\Cita.cpp -o CMakeFiles\AB_FINAL_UNIDAD20.dir\src\Cita.cpp.s
 
+CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/flags.make
+CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/includes_CXX.rsp
+CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.obj: C:/Users/davud/Desktop/AB_Final_Unidad20/src/CSVcontrol.cpp
+CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.obj: CMakeFiles/AB_FINAL_UNIDAD20.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\davud\Desktop\AB_Final_Unidad20\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.obj"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.obj -MF CMakeFiles\AB_FINAL_UNIDAD20.dir\src\CSVcontrol.cpp.obj.d -o CMakeFiles\AB_FINAL_UNIDAD20.dir\src\CSVcontrol.cpp.obj -c C:\Users\davud\Desktop\AB_Final_Unidad20\src\CSVcontrol.cpp
+
+CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.i"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\davud\Desktop\AB_Final_Unidad20\src\CSVcontrol.cpp > CMakeFiles\AB_FINAL_UNIDAD20.dir\src\CSVcontrol.cpp.i
+
+CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.s"
+	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\davud\Desktop\AB_Final_Unidad20\src\CSVcontrol.cpp -o CMakeFiles\AB_FINAL_UNIDAD20.dir\src\CSVcontrol.cpp.s
+
 # Object files for target AB_FINAL_UNIDAD20
 AB_FINAL_UNIDAD20_OBJECTS = \
 "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.obj" \
-"CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.obj" \
 "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj" \
 "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj" \
-"CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj"
+"CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj" \
+"CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.obj"
 
 # External object files for target AB_FINAL_UNIDAD20
 AB_FINAL_UNIDAD20_EXTERNAL_OBJECTS =
 
 AB_FINAL_UNIDAD20.exe: CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.obj
-AB_FINAL_UNIDAD20.exe: CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Database.cpp.obj
 AB_FINAL_UNIDAD20.exe: CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj
 AB_FINAL_UNIDAD20.exe: CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj
 AB_FINAL_UNIDAD20.exe: CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj
+AB_FINAL_UNIDAD20.exe: CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.obj
 AB_FINAL_UNIDAD20.exe: CMakeFiles/AB_FINAL_UNIDAD20.dir/build.make
-AB_FINAL_UNIDAD20.exe: C:/msys64/ucrt64/lib/libsqlite3.dll.a
 AB_FINAL_UNIDAD20.exe: CMakeFiles/AB_FINAL_UNIDAD20.dir/linkLibs.rsp
 AB_FINAL_UNIDAD20.exe: CMakeFiles/AB_FINAL_UNIDAD20.dir/objects1.rsp
 AB_FINAL_UNIDAD20.exe: CMakeFiles/AB_FINAL_UNIDAD20.dir/link.txt

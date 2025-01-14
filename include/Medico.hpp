@@ -1,7 +1,6 @@
 #ifndef MEDICO_HPP
 #define MEDICO_HPP
-
-#include "Database.hpp"
+#include "../include/CSVcontrol.hpp"
 #include <string>
 
 class Medico {
@@ -24,8 +23,8 @@ public:
            const std::string& estado, const std::string& licenciaProfesional,
            const std::string& turnoTrabajo, const std::string& observaciones);
 
-    void guardarEnDB(Database& db);
-    static void mostrarTodos(Database& db);
+    void guardarEnCSV(ControlCSV& controlCSV);
+    static void mostrarTodos(ControlCSV& controlCSV);
 };
 
 #endif 
