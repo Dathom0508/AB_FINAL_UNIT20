@@ -3,36 +3,31 @@
 
 Paciente::Paciente(int dni, const std::string &nombre, const std::string &apellidos,
                    const std::string &fechaNacimiento, const std::string &genero,
-                   const std::string &direccion, const std::string &telefono)
+                   const std::string &direccion, const std::string &telefono,
+                   const std::string &estadoSalud, int medicoCabeceraId, int edad)
     : dni(dni), nombre(nombre), apellidos(apellidos), fechaNacimiento(fechaNacimiento),
-      genero(genero), direccion(direccion), telefono(telefono) {}
+      genero(genero), direccion(direccion), telefono(telefono),
+      estadoSalud(estadoSalud), medicoCabeceraId(medicoCabeceraId), edad(edad) {}
 
-void Paciente::guardarEnDB(Database &db)
-{
-    std::string query = "INSERT INTO Pacientes (dni, nombre, apellidos, fecha_nacimiento, genero, direccion, telefono) "
+void Paciente::guardarEnDB(Database &db) {
+    std::string query = "INSERT INTO Pacientes (dni, nombre, apellidos, fecha_nacimiento, genero, direccion, telefono, estado_salud, medico_cabecera_id, edad) "
                         "VALUES (" +
-                        std::to_string(dni) + ", '" + nombre + "', '" + apellidos + "', '" +
-                        fechaNacimiento + "', '" + genero + "', '" + direccion + "', '" + telefono + "');";
-
-    if (db.executeQuery(query))
-    {
+                        std::to_string(dni) + ", '" + nombre + "', '" + apellidos + "', '" + fechaNacimiento + "', '" + genero + "', '" + direccion + "', '" + telefono + "', '" + estadoSalud + "', " + std::to_string(medicoCabeceraId) + ", " + std::to_string(edad) + ");";
+    
+    if (db.executeQuery(query)) {
         std::cout << "Paciente guardado correctamente." << std::endl;
-    }
-    else
-    {
+    } else {
         std::cerr << "Error al guardar el paciente." << std::endl;
     }
 }
 
-void Paciente::mostrarTodos(Database &db)
-{
+void Paciente::mostrarTodos(Database &db) {
     std::string query = "SELECT dni, nombre, apellidos FROM Pacientes;";
     sqlite3_stmt *stmt = db.prepareQuery(query);
 
     std::cout << "\nLista de Pacientes:\n";
     std::cout << "DNI\tNombre\tApellidos\n";
-    while (sqlite3_step(stmt) == SQLITE_ROW)
-    {
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
         int dni = sqlite3_column_int(stmt, 0);
         std::string nombre = reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1));
         std::string apellidos = reinterpret_cast<const char *>(sqlite3_column_text(stmt, 2));
