@@ -2,6 +2,7 @@
 #define CITA_HPP
 #include <string>
 #include "../include/CSVcontrol.hpp"
+#include <vector>
 
 class Cita {
 private:
@@ -20,7 +21,9 @@ public:
     
     ~Cita();
 
-    bool guardarEnCSV(ControlCSV& controlCSV); 
+    bool guardarEnCSV(CSVcontrol& csvControl); 
+    static void mostrarTodos(CSVcontrol& csvControl);
+    static void buscarCita(CSVcontrol& csvControl, int id);
 };
 
 #endif

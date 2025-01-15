@@ -1,10 +1,10 @@
-#ifndef CONTROLCSV_HPP
-#define CONTROLCSV_HPP
+#ifndef CSVCONTROL_HPP
+#define CSVCONTROL_HPP
 
 #include <string>
 #include <vector>
 
-class ControlCSV {
+class CSVcontrol {
 public:
     void escribirDatosPaciente(const std::string& nombreArchivo, const std::vector<std::string>& datosPaciente);
     std::vector<std::vector<std::string>> leerDatosPaciente(const std::string& nombreArchivo);

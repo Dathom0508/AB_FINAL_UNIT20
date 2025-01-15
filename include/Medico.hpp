@@ -2,6 +2,7 @@
 #define MEDICO_HPP
 #include "../include/CSVcontrol.hpp"
 #include <string>
+#include <vector>
 
 class Medico {
 public:
@@ -23,8 +24,10 @@ public:
            const std::string& estado, const std::string& licenciaProfesional,
            const std::string& turnoTrabajo, const std::string& observaciones);
 
-    void guardarEnCSV(ControlCSV& controlCSV);
-    static void mostrarTodos(ControlCSV& controlCSV);
+    void guardarEnCSV(CSVcontrol& csvControl);
+    static void mostrarTodos(CSVcontrol& csvControl);
+    static void buscarMedico(CSVcontrol& csvControl, const std::string& especialidad);
+    static void eliminarMedico(CSVcontrol& csvControl, int id);
 };
 
-#endif 
+#endif
