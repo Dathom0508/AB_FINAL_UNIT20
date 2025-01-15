@@ -3,6 +3,8 @@
 #include "../include/Cita.hpp"
 #include "../include/CSVcontrol.hpp"
 #include <iostream>
+#include <limits>
+#include <fstream>
 
 void menuPrincipal()
 {
@@ -28,6 +30,13 @@ void menuPacientes(CSVcontrol &csvControl)
         std::cout << "5. Volver al menu principal\n";
         std::cout << "Elige una opcion: ";
         std::cin >> opcion;
+
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Opcion invalida. Intente de nuevo.\n";
+            continue;
+        }
 
         if (opcion == 1)
         {
@@ -84,24 +93,31 @@ void menuPacientes(CSVcontrol &csvControl)
         }
         else
         {
-            std::cout << "Opción invalida. Intente de nuevo.\n";
+            std:: cout << "Opción invalida. Intente de nuevo.\n";
         }
     }
 }
-
 void menuMedicos(CSVcontrol &csvControl)
 {
     int opcion = 0;
 
-    while (opcion != 4)
+    while (opcion != 5)
     {
         std::cout << "\nMenu Medicos\n";
         std::cout << "1. Anadir Medico\n";
         std::cout << "2. Mostrar Medicos\n";
         std::cout << "3. Buscar Medico\n";
-        std::cout << "4. Volver al menu principal\n";
+        std::cout << "4. Eliminar Medico\n";
+        std::cout << "5. Volver al menu principal\n";
         std::cout << "Elige una opcion: ";
         std::cin >> opcion;
+
+        if (std::cin.fail()) {
+            std::cin.clear(); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+            std::cout << "Opción inválida. Intente de nuevo.\n";
+            continue;
+        }
 
         if (opcion == 1)
         {
@@ -149,6 +165,13 @@ void menuMedicos(CSVcontrol &csvControl)
         }
         else if (opcion == 4)
         {
+            int id;
+            std::cout << "Ingrese el ID del medico a eliminar: ";
+            std::cin >> id;
+            Medico::eliminarMedico(csvControl, id);
+        }
+        else if (opcion == 5)
+        {
             std::cout << "Volviendo al menu principal...\n";
         }
         else
@@ -169,6 +192,13 @@ void menuCitas(CSVcontrol &csvControl) {
         std::cout << "4. Volver al menu principal\n";
         std::cout << "Elige una opcion: ";
         std::cin >> opcion;
+
+        if (std::cin.fail()) {
+            std::cin.clear(); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Opción inválida. Intente de nuevo.\n";
+            continue;
+        }
 
         if (opcion == 1) {
             int idCita, dniPaciente, idMedico;
@@ -214,6 +244,12 @@ int main()
     {
         menuPrincipal();
         std::cin >> opcion;
+
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+            continue;
+        }
 
         if (opcion == 1)
         {

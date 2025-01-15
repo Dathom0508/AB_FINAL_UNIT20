@@ -1,5 +1,6 @@
 #include "../include/Medico.hpp"
 #include <iostream>
+#include <fstream>
 #include "../include/CSVcontrol.hpp"
 
 Medico::Medico(int id, const std::string &nombre, const std::string &apellido,
@@ -23,7 +24,7 @@ void Medico::mostrarTodos(CSVcontrol &controlCSV)
 {
     auto datos = controlCSV.leerDatosPaciente("medicos.csv");
     std::cout << "\nLista de Médicos:\n";
-    std::cout << "ID\tNombre\tApellido\tEspecialidad\tDirección\tTeléfono\tCorreo\tEstado\tLicencia\tTurno\tObservaciones\n";
+    std::cout << "ID\tNombre\tApellido\tEspecialidad\tDireccion\tTelefono\tCorreo\tEstado\tLicencia\tTurno\tObservaciones\n";
     for (const auto &fila : datos)
     {
         for (const auto &dato : fila)
@@ -34,8 +35,51 @@ void Medico::mostrarTodos(CSVcontrol &controlCSV)
     }
 }
 
-void Medico::buscarMedico(CSVcontrol &controlCSV, const std::string &especialidad){
+void Medico::buscarMedico(CSVcontrol &controlCSV, const std::string &especialidad) {
+    auto datos = controlCSV.leerDatosPaciente("medicos.csv");
+    bool encontrado = false;
+
+    std::cout << "Médicos con especialidad '" << especialidad << "':\n";
+    std::cout << "ID\tNombre\tApellido\tEspecialidad\tDireccion\tTelefono\tCorreo\tEstado\tLicencia\tTurno\tObservaciones\n";
+
+    for (const auto& fila : datos) {
+        if (fila[3] == especialidad) {
+            for (const auto& dato : fila) {
+                std::cout << dato << "\t";
+            }
+            std::cout << "\n";
+        }
+    }
+
+    if (!encontrado) {
+        std::cout << "No se encontraron médicos con la especialidad: " << especialidad << "\n";
+    }
 }
 
-void Medico::eliminarMedico(CSVcontrol &controlCSV, int id){
+void Medico::eliminarMedico(CSVcontrol &controlCSV, int id) {
+    auto datos = controlCSV.leerDatosPaciente("medicos.csv");
+    bool encontrado = false;
+
+    std::vector<std::vector<std::string>> nuevosDatos;
+    for (const auto& fila : datos) {
+        if (std::stoi(fila[0]) == id) {
+            encontrado = true;
+            std::cout << "Medico con ID " << id << " ha sido eliminado.\n";
+            continue;
+        }
+        nuevosDatos.push_back(fila);
+    }
+
+    if (encontrado) {
+        std::ofstream outFile("medicos.csv");
+        for (const auto& fila : nuevosDatos) {
+            for (const auto& dato : fila) {
+                outFile << dato << ",";
+            }
+            outFile << "\n";
+        }
+        outFile.close();
+    } else {
+        std::cout << "Medico no encontrado con ID: " << id << "\n";
+    }
 }

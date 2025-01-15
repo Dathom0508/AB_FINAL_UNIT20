@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 
+
 void CSVcontrol::escribirDatosPaciente(const std::string& archivo, const std::vector<std::string>& datos) {
     std::ofstream outFile(archivo, std::ios::app);
     if (outFile.is_open()) {

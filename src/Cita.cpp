@@ -1,6 +1,7 @@
 #include "../include/Cita.hpp"
 #include <iostream>
 #include "../include/CSVcontrol.hpp"
+#include <fstream>
 
 Cita::Cita(int id, int paciente_id, int medico_id, const std::string& fecha, const std::string& hora,
            const std::string& motivo, const std::string& estado, const std::string& observaciones)
