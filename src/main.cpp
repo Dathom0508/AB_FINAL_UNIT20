@@ -31,7 +31,8 @@ void menuPacientes(CSVcontrol &csvControl)
         std::cout << "Elige una opcion: ";
         std::cin >> opcion;
 
-        if (std::cin.fail()) {
+        if (std::cin.fail())
+        {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Opcion invalida. Intente de nuevo.\n";
@@ -93,7 +94,7 @@ void menuPacientes(CSVcontrol &csvControl)
         }
         else
         {
-            std:: cout << "Opción invalida. Intente de nuevo.\n";
+            std::cout << "Opcion invalida. Intente de nuevo.\n";
         }
     }
 }
@@ -112,10 +113,11 @@ void menuMedicos(CSVcontrol &csvControl)
         std::cout << "Elige una opcion: ";
         std::cin >> opcion;
 
-        if (std::cin.fail()) {
-            std::cin.clear(); 
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-            std::cout << "Opción inválida. Intente de nuevo.\n";
+        if (std::cin.fail())
+        {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Opcion invalida. Intente de nuevo.\n";
             continue;
         }
 
@@ -158,7 +160,7 @@ void menuMedicos(CSVcontrol &csvControl)
         else if (opcion == 3)
         {
             std::string criterio;
-            std::cout << "Ingrese el criterio de búsqueda (nombre, ID, especialidad): ";
+            std::cout << "Ingrese el criterio de busqueda (nombre, ID, especialidad): ";
             std::cin.ignore();
             std::getline(std::cin, criterio);
             Medico::buscarMedico(csvControl, criterio);
@@ -181,26 +183,31 @@ void menuMedicos(CSVcontrol &csvControl)
     }
 }
 
-void menuCitas(CSVcontrol &csvControl) {
+void menuCitas(CSVcontrol &csvControl)
+{
     int opcion = 0;
 
-    while (opcion != 4) {
+    while (opcion != 4)
+    {
         std::cout << "\nMenu Citas Medicas\n";
         std::cout << "1. Anadir Cita\n";
         std::cout << "2. Mostrar Citas\n";
         std::cout << "3. Buscar Cita\n";
-        std::cout << "4. Volver al menu principal\n";
+        std::cout << "4. Modificar Cita\n";
+        std::cout << "5. Volver al menu principal\n";
         std::cout << "Elige una opcion: ";
         std::cin >> opcion;
 
-        if (std::cin.fail()) {
-            std::cin.clear(); 
+        if (std::cin.fail())
+        {
+            std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Opción inválida. Intente de nuevo.\n";
+            std::cout << "Opcion invalida. Intente de nuevo.\n";
             continue;
         }
 
-        if (opcion == 1) {
+        if (opcion == 1)
+        {
             int idCita, dniPaciente, idMedico;
             std::string fecha, hora, motivo, estado = "Pendiente", observaciones = "Sin observaciones";
 
@@ -220,20 +227,36 @@ void menuCitas(CSVcontrol &csvControl) {
 
             Cita c(idCita, dniPaciente, idMedico, fecha, hora, motivo, estado, observaciones);
             c.guardarEnCSV(csvControl);
-        } else if (opcion == 2) {
+        }
+        else if (opcion == 2)
+        {
             Cita::mostrarTodos(csvControl);
-        } else if (opcion == 3) {
+        }
+        else if (opcion == 3)
+        {
             int idCita;
             std::cout << "Ingrese el ID de la cita a buscar: ";
             std::cin >> idCita;
             Cita::buscarCita(csvControl, idCita);
-        } else if (opcion == 4) {
+        }
+        else if (opcion == 4)
+        {
+            int idCita;
+            std::cout << "Ingrese el ID de la cita a modificar: ";
+            std::cin >> idCita;
+            Cita::modificarCita(csvControl, idCita);
+        }
+        else if (opcion == 5)
+        {
             std::cout << "Volviendo al menu principal...\n";
-        } else {
+        }
+        else
+        {
             std::cout << "Opcion invalida. Intente de nuevo.\n";
         }
     }
 }
+
 
 int main()
 {
@@ -245,9 +268,10 @@ int main()
         menuPrincipal();
         std::cin >> opcion;
 
-        if (std::cin.fail()) {
+        if (std::cin.fail())
+        {
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             continue;
         }
 
@@ -269,7 +293,7 @@ int main()
         }
         else
         {
-            std::cout << "Opcion inválida. Intente de nuevo.\n";
+            std::cout << "Opcion invalida. Intente de nuevo.\n";
         }
     }
 

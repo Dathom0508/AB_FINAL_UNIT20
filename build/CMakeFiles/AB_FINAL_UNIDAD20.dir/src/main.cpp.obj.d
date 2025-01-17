@@ -1,15 +1,7 @@
 CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.obj: \
  C:\Users\davud\Desktop\AB_Final_Unidad20\src\main.cpp \
  C:/Users/davud/Desktop/AB_Final_Unidad20/include/Paciente.hpp \
- C:/Users/davud/Desktop/AB_Final_Unidad20/include/Database.hpp \
- C:/msys64/ucrt64/include/sqlite3.h \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
- C:/msys64/ucrt64/include/stdarg.h \
- C:/msys64/ucrt64/include/_mingw_stdarg.h \
- C:/msys64/ucrt64/include/vadefs.h C:/msys64/ucrt64/include/_mingw.h \
- C:/msys64/ucrt64/include/_mingw_mac.h \
- C:/msys64/ucrt64/include/_mingw_secapi.h \
- C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
+ C:/Users/davud/Desktop/AB_Final_Unidad20/include/CSVcontrol.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/string \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -22,6 +14,10 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/postypes.h \
  C:/msys64/ucrt64/include/c++/13.2.0/cwchar \
  C:/msys64/ucrt64/include/wchar.h C:/msys64/ucrt64/include/corecrt.h \
+ C:/msys64/ucrt64/include/_mingw.h C:/msys64/ucrt64/include/_mingw_mac.h \
+ C:/msys64/ucrt64/include/_mingw_secapi.h \
+ C:/msys64/ucrt64/include/vadefs.h \
+ C:/msys64/ucrt64/include/sdks/_mingw_ddk.h \
  C:/msys64/ucrt64/include/corecrt_stdio_config.h \
  C:/msys64/ucrt64/include/corecrt_wstdlib.h \
  C:/msys64/ucrt64/include/_mingw_off_t.h \
@@ -108,8 +104,14 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h \
  C:/msys64/ucrt64/include/c++/13.2.0/tuple \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/ranges_util.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/vector \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_uninitialized.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc \
  C:/Users/davud/Desktop/AB_Final_Unidad20/include/Medico.hpp \
- C:/Users/davud/Desktop/AB_Final_Unidad20/include/Database.hpp \
+ C:/Users/davud/Desktop/AB_Final_Unidad20/include/Cita.hpp \
+ C:/Users/davud/Desktop/AB_Final_Unidad20/include/CSVcontrol.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ios \
@@ -152,4 +154,10 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/istream \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/limits \
+ C:/msys64/ucrt64/include/c++/13.2.0/fstream \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/codecvt.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc

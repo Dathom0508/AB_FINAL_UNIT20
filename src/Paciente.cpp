@@ -21,7 +21,7 @@ void Paciente::guardarEnCSV(CSVcontrol& controlCSV) {
 void Paciente::mostrarTodos(CSVcontrol& controlCSV) {  
     auto datos = controlCSV.leerDatosPaciente("pacientes.csv");
     std::cout << "\nLista de Pacientes:\n";
-    std::cout << "DNI\tNombre\tApellidos\tFecha de Ingreso\tGénero\tDirección\tTeléfono\tEstado\tMedico ID\tEdad\n";
+    std::cout << "DNI\tNombre\tApellidos\tFecha de Ingreso\tGenero\tDirección\tTelefono\tEstado\tMedico ID\tEdad\n";
     for (const auto& fila : datos) {
         for (const auto& dato : fila) {
             std::cout << dato << "\t";
@@ -33,7 +33,7 @@ void Paciente::mostrarTodos(CSVcontrol& controlCSV) {
 void Paciente::buscarPaciente(CSVcontrol& controlCSV, const std::string& criterio) {
     auto datos = controlCSV.leerDatosPaciente("pacientes.csv");
     for (const auto& fila : datos) {
-        if (fila[0] == criterio || fila[1] == criterio || fila[3] == criterio) { // Busca por DNI, nombre o fecha de ingreso
+        if (fila[0] == criterio || fila[1] == criterio || fila[3] == criterio) { 
             std::cout << "Paciente encontrado: ";
             for (const auto& dato : fila) {
                 std::cout << dato << "\t";
@@ -64,13 +64,13 @@ void Paciente::modificarPaciente(CSVcontrol& controlCSV, int dni) {
             std::getline(std::cin, fechaIngreso);
             std::cout << "Nuevo Género: ";
             std::getline(std::cin, genero);
-            std::cout << "Nueva Dirección: ";
+            std::cout << "Nueva Direccion: ";
             std::getline(std::cin, direccion);
-            std::cout << "Nuevo Teléfono: ";
+            std::cout << "Nuevo Telefono: ";
             std::getline(std::cin, telefono);
             std::cout << "Nuevo Estado Salud: ";
             std::getline(std::cin, estadoSalud);
-            std::cout << "Nuevo Médico Cabecera ID: ";
+            std::cout << "Nuevo Medico Cabecera ID: ";
             std::cin >> medicoCabeceraId;
             std::cout << "Nueva Edad: ";
             std::cin >> edad;

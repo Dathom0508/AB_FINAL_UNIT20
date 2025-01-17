@@ -1,6 +1,5 @@
-CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj: \
- C:\Users\davud\Desktop\AB_Final_Unidad20\src\Paciente.cpp \
- C:/Users/davud/Desktop/AB_Final_Unidad20/include/Paciente.hpp \
+CMakeFiles/AB_FINAL_UNIDAD20.dir/src/CSVcontrol.cpp.obj: \
+ C:\Users\davud\Desktop\AB_Final_Unidad20\src\CSVcontrol.cpp \
  C:/Users/davud/Desktop/AB_Final_Unidad20/include/CSVcontrol.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/string \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/requires_hosted.h \
@@ -109,8 +108,8 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/iostream \
- C:/msys64/ucrt64/include/c++/13.2.0/ostream \
+ C:/msys64/ucrt64/include/c++/13.2.0/fstream \
+ C:/msys64/ucrt64/include/c++/13.2.0/istream \
  C:/msys64/ucrt64/include/c++/13.2.0/ios \
  C:/msys64/ucrt64/include/c++/13.2.0/exception \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/exception_ptr.h \
@@ -149,12 +148,12 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/locale_facets.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/basic_ios.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/ostream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/istream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc \
- C:/msys64/ucrt64/include/c++/13.2.0/fstream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/codecvt.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
- C:/Users/davud/Desktop/AB_Final_Unidad20/include/CSVcontrol.hpp
+ C:/msys64/ucrt64/include/c++/13.2.0/sstream \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc

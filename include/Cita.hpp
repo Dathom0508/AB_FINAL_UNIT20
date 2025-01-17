@@ -24,6 +24,7 @@ public:
     bool guardarEnCSV(CSVcontrol& csvControl); 
     static void mostrarTodos(CSVcontrol& csvControl);
     static void buscarCita(CSVcontrol& csvControl, int id);
+    static void modificarCita(CSVcontrol& csvControl, int id);
 };
 
 #endif
