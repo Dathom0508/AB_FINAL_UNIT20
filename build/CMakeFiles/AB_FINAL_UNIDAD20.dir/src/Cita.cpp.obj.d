@@ -103,12 +103,12 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/uses_allocator_args.h \
  C:/msys64/ucrt64/include/c++/13.2.0/tuple \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/ranges_util.h \
- C:/Users/davud/Desktop/AB_Final_Unidad20/include/CSVcontrol.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/vector \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_uninitialized.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc \
+ C:/Users/davud/Desktop/AB_Final_Unidad20/include/CSVcontrol.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/iostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ostream \
  C:/msys64/ucrt64/include/c++/13.2.0/ios \
@@ -157,4 +157,6 @@ CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/codecvt.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h \
  C:/msys64/ucrt64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++io.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/fstream.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/sstream \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/sstream.tcc

@@ -12,7 +12,10 @@ set(SOURCE_FILES
     src/Medico.cpp
     src/Cita.cpp 
     src/CSVcontrol.cpp
+    src/Reporte.cpp
 )
+
+set(CMAKE_BUILD_TYPE Debug)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 

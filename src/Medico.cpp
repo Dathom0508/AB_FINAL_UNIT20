@@ -13,46 +13,44 @@ Medico::Medico(int id, const std::string &nombre, const std::string &apellido,
       estado(estado), licenciaProfesional(licenciaProfesional),
       turnoTrabajo(turnoTrabajo), observaciones(observaciones) {}
 
-void Medico::guardarEnCSV(CSVcontrol &controlCSV)
-{
+void Medico::guardarEnCSV(CSVcontrol &controlCSV) {
     std::vector<std::string> datosMedico = {
-        std::to_string(id), nombre, apellido, especialidad, direccion, telefono, correoElectronico, estado, licenciaProfesional, turnoTrabajo, observaciones};
+        std::to_string(id), nombre, apellido, especialidad, direccion, telefono, correoElectronico, estado, licenciaProfesional, turnoTrabajo, observaciones
+    };
     controlCSV.escribirDatosPaciente("medicos.csv", datosMedico);
 }
 
-void Medico::mostrarTodos(CSVcontrol &controlCSV)
-{
+void Medico::mostrarTodos(CSVcontrol &controlCSV) {
     auto datos = controlCSV.leerDatosPaciente("medicos.csv");
     std::cout << "\nLista de Médicos:\n";
     std::cout << "ID\tNombre\tApellido\tEspecialidad\tDireccion\tTelefono\tCorreo\tEstado\tLicencia\tTurno\tObservaciones\n";
-    for (const auto &fila : datos)
-    {
-        for (const auto &dato : fila)
-        {
-            std::cout << dato << "\t";
+    for (const auto &fila : datos) {
+        for (const auto &dato : fila) {
+            std::cout << dato << "\t"; 
         }
-        std::cout << "\n";
+        std::cout << "\n"; 
     }
 }
 
-void Medico::buscarMedico(CSVcontrol &controlCSV, const std::string &especialidad) {
+void Medico::buscarMedicoPorCriterios(CSVcontrol &controlCSV, const std::string &especialidad, const std::string &estado) {
     auto datos = controlCSV.leerDatosPaciente("medicos.csv");
     bool encontrado = false;
 
-    std::cout << "Médicos con especialidad '" << especialidad << "':\n";
+    std::cout << "Médicos con especialidad '" << especialidad << "' y estado '" << estado << "':\n";
     std::cout << "ID\tNombre\tApellido\tEspecialidad\tDireccion\tTelefono\tCorreo\tEstado\tLicencia\tTurno\tObservaciones\n";
 
     for (const auto& fila : datos) {
-        if (fila[3] == especialidad) {
+        if (fila[3] == especialidad && fila[7] == estado) {
             for (const auto& dato : fila) {
-                std::cout << dato << "\t";
+                std::cout << dato << "\t"; 
             }
             std::cout << "\n";
+            encontrado = true;
         }
     }
 
     if (!encontrado) {
-        std::cout << "No se encontraron médicos con la especialidad: " << especialidad << "\n";
+        std::cout << "No se encontraron médicos con la especialidad: " << especialidad << " y estado: " << estado << "\n";
     }
 }
 
@@ -65,16 +63,16 @@ void Medico::eliminarMedico(CSVcontrol &controlCSV, int id) {
         if (std::stoi(fila[0]) == id) {
             encontrado = true;
             std::cout << "Medico con ID " << id << " ha sido eliminado.\n";
-            continue;
+            continue; 
         }
-        nuevosDatos.push_back(fila);
+        nuevosDatos.push_back(fila); 
     }
 
     if (encontrado) {
         std::ofstream outFile("medicos.csv");
         for (const auto& fila : nuevosDatos) {
             for (const auto& dato : fila) {
-                outFile << dato << ",";
+                outFile << dato << ","; 
             }
             outFile << "\n";
         }

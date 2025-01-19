@@ -1,5 +1,6 @@
 #ifndef MEDICO_HPP
 #define MEDICO_HPP
+
 #include "../include/CSVcontrol.hpp"
 #include <string>
 #include <vector>
@@ -24,10 +25,10 @@ public:
            const std::string& estado, const std::string& licenciaProfesional,
            const std::string& turnoTrabajo, const std::string& observaciones);
 
-    void guardarEnCSV(CSVcontrol& csvControl);
+    void guardarEnCSV(CSVcontrol &csvControl);
     static void mostrarTodos(CSVcontrol& csvControl);
-    static void buscarMedico(CSVcontrol& csvControl, const std::string& especialidad);
+    static void buscarMedicoPorCriterios(CSVcontrol &controlCSV, const std::string &especialidad, const std::string &estado);
     static void eliminarMedico(CSVcontrol& csvControl, int id);
 };
 
-#endif
+#endif  

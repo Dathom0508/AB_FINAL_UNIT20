@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/davud/Desktop/AB_Final_Unidad20/src/Cita.cpp" "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj" "gcc" "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Cita.cpp.obj.d"
   "C:/Users/davud/Desktop/AB_Final_Unidad20/src/Medico.cpp" "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj" "gcc" "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj.d"
   "C:/Users/davud/Desktop/AB_Final_Unidad20/src/Paciente.cpp" "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj" "gcc" "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj.d"
+  "C:/Users/davud/Desktop/AB_Final_Unidad20/src/Reporte.cpp" "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Reporte.cpp.obj" "gcc" "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Reporte.cpp.obj.d"
   "C:/Users/davud/Desktop/AB_Final_Unidad20/src/main.cpp" "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.obj" "gcc" "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.obj.d"
   )
 

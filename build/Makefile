@@ -224,6 +224,30 @@ src/Paciente.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.s
 .PHONY : src/Paciente.cpp.s
 
+src/Reporte.obj: src/Reporte.cpp.obj
+.PHONY : src/Reporte.obj
+
+# target to build an object file
+src/Reporte.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Reporte.cpp.obj
+.PHONY : src/Reporte.cpp.obj
+
+src/Reporte.i: src/Reporte.cpp.i
+.PHONY : src/Reporte.i
+
+# target to preprocess a source file
+src/Reporte.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Reporte.cpp.i
+.PHONY : src/Reporte.cpp.i
+
+src/Reporte.s: src/Reporte.cpp.s
+.PHONY : src/Reporte.s
+
+# target to generate assembly for a file
+src/Reporte.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\AB_FINAL_UNIDAD20.dir\build.make CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Reporte.cpp.s
+.PHONY : src/Reporte.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -269,6 +293,9 @@ help:
 	@echo ... src/Paciente.obj
 	@echo ... src/Paciente.i
 	@echo ... src/Paciente.s
+	@echo ... src/Reporte.obj
+	@echo ... src/Reporte.i
+	@echo ... src/Reporte.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

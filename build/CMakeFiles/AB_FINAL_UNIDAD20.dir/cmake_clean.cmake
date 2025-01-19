@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Medico.cpp.obj.d"
   "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj"
   "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Paciente.cpp.obj.d"
+  "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Reporte.cpp.obj"
+  "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/Reporte.cpp.obj.d"
   "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.obj"
   "CMakeFiles/AB_FINAL_UNIDAD20.dir/src/main.cpp.obj.d"
   "libAB_FINAL_UNIDAD20.dll.a"

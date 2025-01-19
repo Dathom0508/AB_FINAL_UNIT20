@@ -1,42 +1,43 @@
 #include "../include/Paciente.hpp"
 #include <iostream>
 #include <fstream>
-#include "../include/CSVcontrol.hpp" 
+#include "../include/CSVcontrol.hpp"
 
-Paciente::Paciente(int dni, const std::string& nombre, const std::string& apellidos,
-                   const std::string& fechaIngreso, const std::string& genero,
-                   const std::string& direccion, const std::string& telefono,
-                   const std::string& estadoSalud, int medicoCabeceraId, int edad)
+Paciente::Paciente(int dni, const std::string &nombre, const std::string &apellidos,
+                   const std::string &fechaIngreso, const std::string &enfermedad,
+                   const std::string &genero, const std::string &direccion,
+                   const std::string &telefono, const std::string &estadoSalud,
+                   int medicoCabeceraId, int edad)
     : dni(dni), nombre(nombre), apellidos(apellidos), fechaIngreso(fechaIngreso),
-      genero(genero), direccion(direccion), telefono(telefono),
-      estadoSalud(estadoSalud), medicoCabeceraId(medicoCabeceraId), edad(edad) {}
-
-void Paciente::guardarEnCSV(CSVcontrol& controlCSV) { 
+      enfermedad(enfermedad), genero(genero), direccion(direccion),
+      telefono(telefono), estadoSalud(estadoSalud), medicoCabeceraId(medicoCabeceraId), edad(edad) {}
+      
+void Paciente::guardarEnCSV(CSVcontrol &controlCSV) {
     std::vector<std::string> datosPaciente = {
         std::to_string(dni), nombre, apellidos, fechaIngreso, genero, direccion, telefono, estadoSalud, std::to_string(medicoCabeceraId), std::to_string(edad)
     };
     controlCSV.escribirDatosPaciente("pacientes.csv", datosPaciente);
 }
 
-void Paciente::mostrarTodos(CSVcontrol& controlCSV) {  
+void Paciente::mostrarTodos(CSVcontrol &controlCSV) {
     auto datos = controlCSV.leerDatosPaciente("pacientes.csv");
     std::cout << "\nLista de Pacientes:\n";
-    std::cout << "DNI\tNombre\tApellidos\tFecha de Ingreso\tGenero\tDirección\tTelefono\tEstado\tMedico ID\tEdad\n";
+    std::cout << "DNI\tNombre\tApellidos\tFecha de Ingreso\tGenero\tDire cción\tTelefono\tEstado\tMedico ID\tEdad\n";
     for (const auto& fila : datos) {
         for (const auto& dato : fila) {
-            std::cout << dato << "\t";
+            std::cout << dato << "\t"; 
         }
-        std::cout << "\n";
+        std::cout << "\n"; 
     }
 }
 
-void Paciente::buscarPaciente(CSVcontrol& controlCSV, const std::string& criterio) {
+void Paciente::buscarPaciente(CSVcontrol &controlCSV, const std::string &criterio) {
     auto datos = controlCSV.leerDatosPaciente("pacientes.csv");
-    for (const auto& fila : datos) {
-        if (fila[0] == criterio || fila[1] == criterio || fila[3] == criterio) { 
+    for (const auto &fila : datos) {
+        if (fila[0] == criterio || fila[1] == criterio || fila[3] == criterio) {
             std::cout << "Paciente encontrado: ";
-            for (const auto& dato : fila) {
-                std::cout << dato << "\t";
+            for (const auto &dato : fila) {
+                std::cout << dato << "\t"; 
             }
             std::cout << "\n";
             return;
@@ -45,11 +46,11 @@ void Paciente::buscarPaciente(CSVcontrol& controlCSV, const std::string& criteri
     std::cout << "Paciente no encontrado con criterio: " << criterio << "\n";
 }
 
-void Paciente::modificarPaciente(CSVcontrol& controlCSV, int dni) {
+void Paciente::modificarPaciente(CSVcontrol &controlCSV, int dni) {
     auto datos = controlCSV.leerDatosPaciente("pacientes.csv");
     bool encontrado = false;
 
-    for (auto& fila : datos) {
+    for (auto &fila : datos) {
         if (std::stoi(fila[0]) == dni) {
             encontrado = true;
             std::cout << "Modificando paciente con DNI: " << dni << "\n";
@@ -90,11 +91,11 @@ void Paciente::modificarPaciente(CSVcontrol& controlCSV, int dni) {
 
     if (encontrado) {
         std::ofstream outFile("pacientes.csv");
-        for (const auto& fila : datos) {
-            for (const auto& dato : fila) {
-                outFile << dato << ",";
+        for (const auto &fila : datos) {
+            for (const auto &dato : fila) {
+                outFile << dato << ","; 
             }
-            outFile << "\n";
+            outFile << "\n"; 
         }
         outFile.close();
         std::cout << "Paciente modificado exitosamente.\n";
@@ -103,15 +104,15 @@ void Paciente::modificarPaciente(CSVcontrol& controlCSV, int dni) {
     }
 }
 
-void Paciente::eliminarPaciente(CSVcontrol& controlCSV, int dni) {
+void Paciente::eliminarPaciente(CSVcontrol &controlCSV, int dni) {
     auto datos = controlCSV.leerDatosPaciente("pacientes.csv");
     bool encontrado = false;
 
     std::vector<std::vector<std::string>> nuevosDatos;
-    for (const auto& fila : datos) {
+    for (const auto &fila : datos) {
         if (std::stoi(fila[0]) == dni) {
             encontrado = true;
-            std::cout << "Paciente con DNI " << dni << " ha sido eliminado.\n";
+            std::cout << "Paciente con DNI " << dni << " ha sido eliminado.\n"; 
             continue; 
         }
         nuevosDatos.push_back(fila); 
@@ -119,14 +120,14 @@ void Paciente::eliminarPaciente(CSVcontrol& controlCSV, int dni) {
 
     if (encontrado) {
         std::ofstream outFile("pacientes.csv");
-        for (const auto& fila : nuevosDatos) {
-            for (const auto& dato : fila) {
-                outFile << dato << ",";
+        for (const auto &fila : nuevosDatos) {
+            for (const auto &dato : fila) {
+                outFile << dato << ","; 
             }
             outFile << "\n";
         }
         outFile.close();
     } else {
-        std::cout << "Paciente no encontrado con DNI: " << dni << "\n";
+        std::cout << "Paciente no encontrado con DNI: " << dni << "\n"; 
     }
 }
